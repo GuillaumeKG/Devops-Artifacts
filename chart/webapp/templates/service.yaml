@@ -1,0 +1,21 @@
+{{- if .Values.service.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "webapp.fullname" . }}
+  labels:
+    release: {{ .Release.Name }}
+    app: {{ template "webapp.name" . }}
+    chart: {{ template "webapp.chart" . }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: NodePort
+  ports:
+    - name: service
+      port: {{ .Values.service.port }}
+      protocol: {{ .Values.service.protocol }}
+      targetPort: {{ .Values.service.targetPort }}
+  selector:
+    release: {{ .Release.Name }}
+    app: {{ template "webapp.name" . }}
+{{- end }}

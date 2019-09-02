@@ -1,0 +1,15 @@
+
+namespace: application
+
+application:
+  replicas: 2
+  image:
+    repository: gcr.io/heptio-images/ark
+    tag: v0.10.2
+    pullPolicy: IfNotPresent
+
+service:
+  enabled: true
+  port: 
+  targetPort: 
+  protocol: TCP

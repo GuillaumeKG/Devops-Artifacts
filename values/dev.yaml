@@ -1,0 +1,7 @@
+namespace: dev
+
+application:
+  replicas: 1
+  image:
+    repository: gcr.io/heptio-images/ark
+    tag: v0.10.2

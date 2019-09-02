@@ -1,0 +1,11 @@
+apiVersion: v1
+appVersion: 0.0.1
+deprecated: false
+description: A Helm chart for demo webapp
+name: webapp
+version: 0.0.1
+#home: https://github.com/heptio/ark
+#icon: https://cdn-images-1.medium.com/max/1600/1*-9mb3AKnKdcL_QD3CMnthQ.png
+#sources:
+#- https://github.com/heptio/ark
+#tillerVersion: ">=2.10.0"
